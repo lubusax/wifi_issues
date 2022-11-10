@@ -1,5 +1,5 @@
 import logging
-from systemd import journal
+from systemd.journal import JournalHandler
 
 
 
@@ -14,7 +14,7 @@ consoleHandler.setLevel(logging.DEBUG)
 logger.addHandler(consoleHandler)
 consoleHandler.setFormatter(formatter)
 
-logger.addHandler(journal.JournalHandler())
+logger.addHandler(JournalHandler())
 
 
 
